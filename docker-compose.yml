@@ -1,0 +1,13 @@
+influxdb:
+  image: 'influxdb:0.13.0'
+  volumes:
+    - '/var/lib/influxdb:/var/lib/influxdb'
+  ports:
+    - '8083:8083'
+    - '8086:8086'
+grafana:
+  image: 'grafana/grafana:3.0.3'
+  links:
+    - influxdb
+  ports:
+    - '8084:3000'
