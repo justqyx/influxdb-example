@@ -1,5 +1,5 @@
 influxdb:
-  image: 'influxdb:0.13.0'
+  image: 'influxdb:alpine'
   volumes:
     - '/var/lib/influxdb:/var/lib/influxdb'
   ports:
